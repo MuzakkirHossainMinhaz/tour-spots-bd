@@ -28,12 +28,12 @@ export default function Navbar() {
 
   const handleGoogleSignOut = () => {
     signOut(auth)
-    .then( () => {
-      setUser({});
-    })
-    .catch((error) => {
-      alert("Error Found..!");
-    })
+      .then(() => {
+        setUser({});
+      })
+      .catch((error) => {
+        alert("Error Found..!");
+      })
   }
 
   return (
@@ -58,20 +58,26 @@ export default function Navbar() {
             <a href="/home">Home</a>
           </li>
           <li>
+            <a href="/places">Places</a>
+          </li>
+          <li>
             <a href="/community">Community</a>
           </li>
           <li>
             <a href="/about">About</a>
           </li>
         </ul>
-        <div className="profile">
-          <img src={user.photoURL} alt="" />
-          <p>{user.displayName}</p>
-        </div>
+
         {
           !user.uid ?
-          <button onClick={handleGoogleSignIn}>Sign in</button> :
-          <button onClick={handleGoogleSignOut}>Sign out</button>
+            <button onClick={handleGoogleSignIn}>Sign in</button> :
+
+            <div className="profile">
+              <img src={user.photoURL} alt="" />
+              <p>{user.displayName}</p>
+
+              <button onClick={handleGoogleSignOut}>Sign out</button>
+            </div>
         }
       </Nav>
       <ResponsiveNav state={navbarState}>
@@ -82,13 +88,18 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="/about" onClick={() => setNavbarState(false)}>
-              About
+            <a href="/places" onClick={() => setNavbarState(false)}>
+              Places
             </a>
           </li>
           <li>
             <a href="/community" onClick={() => setNavbarState(false)}>
-              Places
+              Community
+            </a>
+          </li>
+          <li>
+            <a href="/about" onClick={() => setNavbarState(false)}>
+              About
             </a>
           </li>
         </ul>
@@ -146,12 +157,13 @@ const Nav = styled.nav`
     justify-content: center;
   }
   .profile img{
-    width: 18%;
+    width: 10%;
     border-radius: 50%;
   }
   .profile p{
-    font-size: 18px;
+    font-size: 20px;
     margin-left: 8px;
+    margin-right: 8px;
   }
   button {
     padding: 0.7rem 1.2rem;

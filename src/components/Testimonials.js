@@ -7,7 +7,7 @@ export default function Testimonials() {
     return (
         <Section id="testimonials">
             <div className="title">
-                <h2>Happy Customers</h2>
+                <h2>Happy Visitors</h2>
             </div>
             <div className="testimonials">
                 <div className="testimonial">
