@@ -166,9 +166,9 @@ const Nav = styled.nav`
     margin-right: 8px;
   }
   button {
-    padding: 0.7rem 1.2rem;
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    border-radius: 0.7rem;
+    border-radius: 0.3rem;
     border: none;
     color: white;
     background-color: #48cae4;

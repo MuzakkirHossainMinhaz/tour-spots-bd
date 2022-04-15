@@ -34,7 +34,7 @@ const Place = () => {
                     </header>
                     <img src={blog.img} alt='cover' />
                     <p className='blog-desc'>{blog.description}</p>
-                    <div className='footer'>
+                    <div className='footer-a'>
                         <a href={blog.maps}>Google Map &#10145;</a>
                         <a href={blog.wiki}>Wikipedia</a>
                     </div>

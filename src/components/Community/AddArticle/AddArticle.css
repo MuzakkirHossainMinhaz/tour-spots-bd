@@ -1,0 +1,59 @@
+.head{
+    margin-top: 10px;
+    width: 22%;
+}
+.no-user{
+    text-align: center;
+    color: brown;
+    height: 300px;
+}
+.no-user h1{
+    color: tomato;
+}
+.form-group{
+    background-color: whitesmoke;
+    padding: 20px;
+    border: 0.5px solid brown;
+    border-radius: 7px;
+}
+label{
+    font-size: 18px;
+    
+}
+.title, .description, .image{
+    margin-top: 8px;
+}
+.title-field{
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid burlywood;
+}
+.description-field{
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid burlywood;
+    height: 100px;
+}
+.image-field{
+    width: 100%;
+    padding: 8px;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    font-size: 14px;
+    border: 1px solid burlywood;
+}
+.btn{
+    cursor: pointer;
+    padding: 7px 20px;
+    background-color: aquamarine;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(9, 68, 48);
+}

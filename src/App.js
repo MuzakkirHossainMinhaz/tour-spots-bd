@@ -6,6 +6,8 @@ import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Places from './components/Places/Places';
+import Community from './components/Community/Community';
+import About from './components/About/About';
 
 export default function App() {
   useEffect(() => {
@@ -38,6 +40,8 @@ export default function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/places/*' element={<Places></Places>}></Route>
+        <Route path='/community/*' element={<Community></Community>}></Route>
+        <Route path='/about' element={<About></About>}></Route>
       </Routes>
     </div>
   );

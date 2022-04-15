@@ -86,6 +86,10 @@ const Section = styled.section`
           height: 3rem;
         }
         .details {
+          margin-top: 0;
+          h4{
+            margin-top: 0;
+          }
           span {
             font-size: 0.9rem;
           }

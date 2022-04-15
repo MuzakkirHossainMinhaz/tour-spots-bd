@@ -1,0 +1,26 @@
+.about-us{
+    margin: 2rem auto 3rem;
+    max-width: 968px;
+    text-align: center;
+}
+.persons{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.person{
+    width: 350px;
+    margin: 0 auto 1.5rem;
+}
+.person img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 2rem 0 1.5rem 0;
+}
+.person small{
+    font-weight: 500;
+}
+.person p{
+    margin-top: 1rem;
+}

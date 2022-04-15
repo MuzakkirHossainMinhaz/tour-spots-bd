@@ -42,7 +42,7 @@ a {
     margin-bottom: var(--mb-2);
 }
 .container {
-    max-width: 968px;
+    max-width: 1100px;
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
 }
