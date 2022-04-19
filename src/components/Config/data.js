@@ -143,6 +143,42 @@ export const blogList = [
         wiki: 'https://en.wikipedia.org/wiki/Ahsan_Manzil',
         maps: 'https://www.google.com/maps/place/%E0%A6%86%E0%A6%B9%E0%A7%8D%E0%A6%B8%E0%A6%BE%E0%A6%A8+%E0%A6%AE%E0%A6%9E%E0%A7%8D%E0%A6%9C%E0%A6%BF%E0%A6%B2+%E0%A6%9C%E0%A6%BE%E0%A6%A6%E0%A7%81%E0%A6%98%E0%A6%B0/@23.7085464,90.4038441,17z/data=!3m1!4b1!4m5!3m4!1s0x3755b9047a855555:0xdb6be1e307885b57!8m2!3d23.7085464!4d90.4060328',
     },
+    {
+        id: 13,
+        img: '/assets/images/Mujibnagar.jpg',
+        name: 'Mujibnagar',
+        division: 'Khulna',
+        district: 'Meherpur',
+        subDistrict: 'Mujibnagar',
+        description:
+            "Mujibnagar, formerly known as Baidyanathtala (Boiddonathtola) and Bhoborpara, is a town in the Meherpur District of Bangladesh.[2] The First Government of Bangladesh was formed on 10 April 1971, however, sworn in on 17 April 1971 in this place by the elected representatives of the Bengalees (mostly belongling to Awami League), that led the Bangladesh Liberation War, who were leading the guerrilla war for the independence of Bangladesh (then East Pakistan) from Pakistan in 1971.[3] The place was renamed Mujibnagar by the proclamation of independence,[4] in honour of Sheikh Mujibur Rahman, who declared Bangladesh independent.[1] The actual capital of the government while in exile was Calcutta. A memorial complex covering 20.10 acres (8.13 ha) has been built at the site where thed ministers of that first government took their oaths.",
+        wiki: 'https://en.wikipedia.org/wiki/Mujibnagar',
+        maps: 'https://www.google.com/maps/place/Mujibnagar/@23.6507833,88.5738586,14z/data=!3m1!4b1!4m5!3m4!1s0x39f93bd1f14b1aa1:0xd24ee42cce1dbd04!8m2!3d23.646846!4d88.5927608?hl=en',
+    },
+    {
+        id: 14,
+        img: '/assets/images/Nilkuthi.jpg',
+        name: 'Amjhupi Neelkuthi',
+        division: 'Khulna',
+        district: 'Meherpur',
+        subDistrict: 'Meherpur',
+        description:
+            "Amjhupi Nilkuthi is located about six kilometers east of Meherpur town. This kuthi is situated in a beautiful natural environment near the bank of the Kajla river in Dokkhinpara of Amjhupi village. On 13th May 1978, Amjhupi Nilkuthi was considered as a tourist center by the Khulna Development Authority. There has been a belief that this kuthi was the last meeting place of Mir Jafar and the conspirators with Robert Clive, and that's why not only Nawab Siraj-ud-Daula's fate was turnover but also Bengalis lost their freedom.",
+        wiki: 'https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AE%E0%A6%9D%E0%A7%81%E0%A6%AA%E0%A6%BF_%E0%A6%A8%E0%A7%80%E0%A6%B2%E0%A6%95%E0%A7%81%E0%A6%A0%E0%A6%BF',
+        maps: 'https://www.google.com/maps/place/Amjhupi+Neelkuthi/@23.7412349,88.6759974,17z/data=!3m1!4b1!4m5!3m4!1s0x39f9363141a4c8d5:0xd61a22d66322b4b0!8m2!3d23.741235!4d88.6781868?hl=en',
+    },
+    {
+        id: 15,
+        img: '/assets/images/BhatparaNeelkuthi.jpg',
+        name: 'Bhatpara Neelkuthi',
+        division: 'Khulna',
+        district: 'Meherpur',
+        subDistrict: 'Meherpur',
+        description:
+            "Bhatpara Neelkuthi (Bengali: ভাটপাড়া নীলিকুঠি) is a ruined indigo factory situated in Gangni Upazila of Meherpur District, Bangladesh. It was built by the British in 1778. It is about 17 kilometres (11 mi) from Meherpur town. There is a mango garden beside the cottage. There is also a ruined church on the northwest part of the garden. A very shallow river named Kazla flows by the Neelkuthi. It's contemporary to amjhupi Neelkuthi.",
+        wiki: 'https://en.wikipedia.org/wiki/Bhatpara_Neelkuthi',
+        maps: 'https://www.google.com/maps/place/Bhatpara+Nilkuthi+and+DC+Eco+park/@23.8462515,88.699533,17z/data=!3m1!4b1!4m5!3m4!1s0x39f94951e5203d3d:0x9a4dd3c55d456071!8m2!3d23.8462515!4d88.7017217?hl=en',
+    },
 
     /* {
         id: 2,

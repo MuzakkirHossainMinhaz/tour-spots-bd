@@ -8,10 +8,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
-.person{
-    width: 350px;
-    margin: 0 auto 1.5rem;
-}
 .person img{
     width: 200px;
     height: 200px;

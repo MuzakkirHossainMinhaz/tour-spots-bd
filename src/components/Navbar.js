@@ -26,10 +26,12 @@ export default function Navbar() {
     <>
       <Nav className="container mt-3">
         <div className="brand">
-          <div className="container1">
+          <a
+            href="/home"
+            className="container1 rounded-3 btn btn-light">
             <img src={logo} alt="" />
             TourSpotsBD
-          </div>
+          </a>
           <div className="toggle">
             {navbarState ? (
               <VscChromeClose onClick={() => setNavbarState(false)} />
@@ -56,9 +58,9 @@ export default function Navbar() {
 
         {
           user ?
-            <div className="d-flex align-items-center">
-              <p className="mb-0">Signed in as <span className="text-success font-monospace me-3">{user.email}</span></p>
+            <div className="text-end">
               <button className="border-0 text-white" onClick={handleSignOut}>SignOut</button>
+              <p className="mb-0">Signed in as <span className="text-success font-monospace">{user.email}</span></p>
             </div>
             :
             <button onClick={handleSignIn}>Signin</button>

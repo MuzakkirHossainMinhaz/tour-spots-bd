@@ -22,7 +22,7 @@ export default function DeleteArticle({ id, imageUrl }) {
     return (
         <div>
             <i
-                class="material-icons"
+                className="material-icons"
                 onClick={handleDelete}
                 style={{ cursor: "pointer", color: "red" }}
             >clear</i>

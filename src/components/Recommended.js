@@ -62,7 +62,7 @@ export default function Recommend() {
   return (
     <Section id="recommend" className="container">
       <div className="title">
-        <h2 className="fw-bold">RECOMMENDED SPOTS</h2>
+        <h2 className="fw-bold text-primary">RECOMMENDED SPOTS</h2>
       </div>
       <div className="destinations">
         {data.map((destination) => {

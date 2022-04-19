@@ -3,8 +3,9 @@ import './SearchBar.css'
 
 const SearchBar = ({ formSubmit, value, handleSearchKey, clearSearch }) => (
     <div className='searchBar-wrap'>
-        <form onSubmit={formSubmit}>
+        <form className='search-district' onSubmit={formSubmit}>
             <input
+                className='w-100'
                 type='text'
                 placeholder='Search by District'
                 value={value}

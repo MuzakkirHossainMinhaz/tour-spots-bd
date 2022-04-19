@@ -11,6 +11,8 @@ import About from './components/About/About';
 import Login from './components/Login/Login'
 import Logout from './components/Logout/Logout'
 import Features from './components/Features';
+import Hotel from './components/Hotel/Hotel';
+import Travel from './components/Travel/Travel';
 
 export default function App() {
   useEffect(() => {
@@ -49,6 +51,8 @@ export default function App() {
         <Route path='/logout' element={<Logout></Logout>}></Route>
         <Route path='/features' element={<Features></Features>}></Route>
         <Route path='/register' element={<Logout></Logout>}></Route>
+        <Route path='/hotel' element={<Hotel></Hotel>}></Route>
+        <Route path='/travel' element={<Travel></Travel>}></Route>
       </Routes>
     </div>
   );

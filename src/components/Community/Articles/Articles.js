@@ -19,7 +19,6 @@ export default function Articles() {
                 ...doc.data(),
             }));
             setArticles(articles);
-            console.log(articles);
         });
     }, []);
 
@@ -40,45 +39,44 @@ export default function Articles() {
                         likes,
                         comments,
                     }) => (
-                        <div className="articles border border-2 border-primary" key={id}>
-                            <div className="row-1">
-                                <div>
+                        <div className="card mb-3 rounded-3" key={id}>
+                            <div className="row g-0">
+                                <div className="col-md-4">
                                     <Link to={`/community/blog/${id}`}>
-                                        <img
-                                            className="img w-100"
-                                            src={imageUrl}
-                                            alt="titleImage"
-                                            style={{ height: 160, width: 160 }}
-                                        />
+                                        <img src={imageUrl} className="img-fluid rounded-start" alt="" />
                                     </Link>
                                 </div>
-                                <div className="text ms-3">
-                                    <div className="row-2">
-                                        <div>
-                                            {createdBy && (
-                                                <span className="author">{createdBy}</span>
-                                            )}
-                                        </div>
-                                        <div className="d-flex flex-row-reverse">
-                                            {user && user.uid === userId && (
-                                                <DeleteArticle id={id} imageUrl={imageUrl} />
-                                            )}
-                                        </div>
-                                    </div>
-                                    <h2>{title}</h2>
-                                    <small>{createdAt.toDate().toDateString()}</small>
-                                    <h6>{description}</h6>
-
-                                    <div className="d-flex flex-row-reverse">
-                                        {user && <LikeArticle id={id} likes={likes} />}
-                                        <div className="pe-2">
-                                            <p>{likes?.length} likes</p>
-                                        </div>
-                                        {comments && comments.length > 0 && (
-                                            <div className="pe-2">
-                                                <p>{comments?.length} comment(s)</p>
+                                <div className="col-md-8">
+                                    <div className="card-body">
+                                        <div className="d-flex justify-content-between">
+                                            <div>
+                                                {createdBy && (
+                                                    <span className="author">{createdBy}</span>
+                                                )}
+                                                {!createdBy && (
+                                                    <span className="author">unknown</span>
+                                                )}
                                             </div>
-                                        )}
+                                            <div className="d-flex flex-row-reverse">
+                                                {user && user.uid === userId && (
+                                                    <DeleteArticle id={id} imageUrl={imageUrl} />
+                                                )}
+                                            </div>
+                                        </div>
+                                        <h3 className="card-title">{title}</h3>
+                                        <p className="card-text">{description}</p>
+                                        <div className="d-flex flex-row-reverse">
+                                            {user && <LikeArticle id={id} likes={likes} />}
+                                            <div className="pe-2">
+                                                <p>{likes?.length} likes</p>
+                                            </div>
+                                            {comments && comments.length > 0 && (
+                                                <div className="pe-2">
+                                                    <p>{comments?.length} comment(s)</p>
+                                                </div>
+                                            )}
+                                        </div>
+                                        <p className="card-text"><small className="text-muted">{createdAt.toDate().toDateString()}</small></p>
                                     </div>
                                 </div>
                             </div>

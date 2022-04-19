@@ -54,7 +54,7 @@ export default function Services() {
   ];
   return (
     <div  id="services" className="container my-5">
-      <h2 className="text-center fw-bold">OUR SERVICES</h2>
+      <h2 className="text-center fw-bold text-primary">OUR SERVICES</h2>
       <Section>
         {data.map((service, index) => {
           return (

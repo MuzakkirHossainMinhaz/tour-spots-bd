@@ -1,0 +1,9 @@
+@media screen and (max-width: 768px) {
+    .parent-community-home{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .wd-100{
+        width: 100%;
+    }
+}

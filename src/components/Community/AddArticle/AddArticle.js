@@ -6,6 +6,7 @@ import { addDoc, collection, Timestamp } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { toast } from "react-toastify";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { Form } from "react-bootstrap";
 
 export default function AddArticle() {
     const [user] = useAuthState(auth);
@@ -86,13 +87,13 @@ export default function AddArticle() {
     const handleSignin = () => {
         navigate('/login');
     }
-    
+
     const handleRegister = () => {
         navigate('/logout');
     }
 
     return (
-        <div className="head" style={{ position: "fixed" }}>
+        <div className="container">
             {!user ? (
                 <div className="no-user mt-5">
                     <h2>To Create Blog</h2>
@@ -101,42 +102,48 @@ export default function AddArticle() {
                 </div>
             ) : (
                 <div className="form-group">
-                    <h2>Create article</h2>
+                    <h2 className="text-info">Create article</h2>
+
+                    <Form>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                            <Form.Label>Title</Form.Label>
+                            <Form.Control
+                                type="text"
+                                placeholder=""
+                                name="title"
+                                value={formData.title}
+                                onChange={(e) => handleChange(e)} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Label>Description</Form.Label>
+                            <Form.Control
+                                as="textarea"
+                                rows={3}
+                                name="description"
+                                value={formData.description}
+                                onChange={(e) => handleChange(e)} />
+                        </Form.Group>
+                    </Form>
 
                     {/* title */}
-                    <div className="title">
-                        <label htmlFor="">Title</label> <br />
-                        <input
-                            type="text"
-                            name="title"
-                            className="title-field"
-                            value={formData.title}
-                            onChange={(e) => handleChange(e)}
-                        />
-                    </div>
+                    {/* className="title-field" */}
 
                     {/* description */}
-                    <div className="description">
-                        <label htmlFor="">Description</label><br />
-                        <textarea
-                            name="description"
-                            className="description-field"
-                            value={formData.description}
-                            onChange={(e) => handleChange(e)}
-                        />
-                    </div>
+                    {/* name="description"
+                    className="description-field" */}
 
-                    {/* image */}
-                    <div className="image">
-                        <label htmlFor="">Image</label><br />
-                        <input
+                    <Form.Group controlId="formFileMultiple" className="mb-3">
+                        <Form.Label>Image</Form.Label>
+                        <Form.Control
                             type="file"
                             name="image"
-                            className="image-field"
                             accept="image/*"
                             onChange={(e) => handleImageChange(e)}
-                        />
-                    </div>
+                            multiple />
+                    </Form.Group>
+
+                    {/* image */}
+                    {/* className="image-field" */}
 
                     {progress === 0 ? null : (
                         <div className="progress">

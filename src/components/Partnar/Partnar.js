@@ -1,50 +1,53 @@
-import React from "react";
+import React from 'react';
+import './Partnar.css'
 import styled from "styled-components";
-import avatarImage1 from "../assets/avatarImage1.png";
-import avatarImage3 from "../assets/avatarImage3.png";
-import avatarImage2 from "../assets/avatarImage2.png";
+import service5 from "../../assets/service5.png";
+import service6 from "../../assets/service6.png";
+import { useNavigate } from 'react-router-dom';
 
-export default function Testimonials() {
+const Partnar = () => {
+    const navigate = useNavigate();
+
+    const handleHotel = () => {
+        navigate('/hotel');
+    }
+    
+    const handleTravel = () => {
+        navigate('/travel');
+    }
+    
     return (
         <Section id="testimonials" className="container d-block mx-auto">
             <div className="title">
-                <h2 className="fw-bold text-primary">HAPPY VISITORS</h2>
+                <h2 className="fw-bold text-primary">OUR PARTNER</h2>
             </div>
             <div className="testimonials">
-                <div className="testimonial">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate asperiores eaque.</p>
+                <div className="testimonial" onClick={handleTravel}>
                     <div className="info">
-                        <img src={avatarImage1} alt="" />
                         <div className="details">
-                            <h5>Muzakkir Hossain Minhaz</h5>
-                            <span>DEPT. - CSE; Batch - 8th</span>
+                            <div className="icon">
+                                <img src={service5} alt="" />
+                            </div>
+                            <h5>Travel Agency</h5>
                         </div>
                     </div>
+                    <p>Yes, you can contact travel agency to go your tour spots by using our website. Yes, you can contact travel agency to go your tour spots by using our website.</p>
                 </div>
-                <div className="testimonial">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate asperiores eaque.</p>
+                <div className="testimonial" onClick={handleHotel}>
                     <div className="info">
-                        <img src={avatarImage2} alt="" />
                         <div className="details">
-                            <h5>Md. Shohan Khan</h5>
-                            <span>DEPT. - CSE; Batch - 8th</span>
+                            <div className="icon">
+                                <img src={service6} alt="" />
+                            </div>
+                            <h5>Hotel Agency</h5>
                         </div>
                     </div>
-                </div>
-                <div className="testimonial">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate asperiores eaque.</p>
-                    <div className="info">
-                        <img src={avatarImage3} alt="" />
-                        <div className="details">
-                            <h5>Yasir Arafat Prince</h5>
-                            <span>DEPT. - CSE; Batch - 8th</span>
-                        </div>
-                    </div>
+                    <p>You can contact with hotel agency to the nearest of your tour spots by using our website. You can contact with hotel agency to the nearest ...</p>
                 </div>
             </div>
         </Section>
     );
-}
+};
 
 const Section = styled.section`
   margin: 3rem 0;
@@ -53,10 +56,14 @@ const Section = styled.section`
     margin-bottom: 2rem;
   }
   .testimonials {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
     .testimonial {
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+        gap: 1rem;
+        cursor: pointer;
       background-color: aliceblue;
       padding: 2rem;
       border-radius: 0.5rem;
@@ -66,12 +73,14 @@ const Section = styled.section`
         transform: translateX(0.4rem) translateY(-1rem);
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       }
+      p{
+          margin-bottom: 0;
+      }
       .info {
         display: flex;
         justify-content: center;
         gap: 1rem;
         align-items: center;
-        margin-top: 1rem;
         img {
           border-radius: 3rem;
           height: 2.5rem;
@@ -102,3 +111,5 @@ const Section = styled.section`
     }
   }
 `;
+
+export default Partnar;
