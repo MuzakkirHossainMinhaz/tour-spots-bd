@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './AddArticle.css'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { auth, db, storage } from "../../../firebase.init";
 import { addDoc, collection, Timestamp } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
@@ -28,7 +28,7 @@ export default function AddArticle() {
 
     const handlePublish = () => {
         if (!formData.title || !formData.description || !formData.image) {
-            alert("Please fill all the fields");
+            toast("Please fill all the fields");
             return;
         }
 
@@ -81,12 +81,23 @@ export default function AddArticle() {
         );
     };
 
+    const navigate = useNavigate();
+
+    const handleSignin = () => {
+        navigate('/login');
+    }
+    
+    const handleRegister = () => {
+        navigate('/logout');
+    }
+
     return (
         <div className="head" style={{ position: "fixed" }}>
             {!user ? (
-                <div className="no-user">
+                <div className="no-user mt-5">
                     <h2>To Create Blog</h2>
-                    <h1>REGISTER</h1>
+                    <button className="fs-5 fw-bold btn bg-none text-info" onClick={handleSignin}>SIGN IN</button> or
+                    <button className="fs-5 fw-bold btn bg-none text-info" onClick={handleRegister}>REGISTER</button>
                 </div>
             ) : (
                 <div className="form-group">
@@ -139,7 +150,7 @@ export default function AddArticle() {
                     )}
                     <br />
                     <button
-                        className="btn"
+                        className="btn btn-info text-white w-100"
                         onClick={handlePublish}
                     >
                         Publish

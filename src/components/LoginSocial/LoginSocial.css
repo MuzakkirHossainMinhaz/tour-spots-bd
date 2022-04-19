@@ -1,0 +1,7 @@
+.or{
+    display: flex;
+    align-items: center;
+}
+.or p{
+    margin: 15px;
+}

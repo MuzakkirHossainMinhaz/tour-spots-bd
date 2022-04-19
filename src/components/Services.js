@@ -53,24 +53,27 @@ export default function Services() {
     },
   ];
   return (
-    <Section id="services">
-      {data.map((service, index) => {
-        return (
-          <div className="service" key={service.id}>
-            <div className="icon">
-              <img src={service.icon} alt="" />
+    <div  id="services" className="container my-5">
+      <h2 className="text-center fw-bold">OUR SERVICES</h2>
+      <Section>
+        {data.map((service, index) => {
+          return (
+            <div className="service" key={service.id}>
+              <div className="icon">
+                <img src={service.icon} alt="" />
+              </div>
+              <h3>{service.title}</h3>
+              <p>{service.subTitle}</p>
             </div>
-            <h3>{service.title}</h3>
-            <p>{service.subTitle}</p>
-          </div>
-        );
-      })}
-    </Section>
+          );
+        })}
+      </Section>
+    </div>
   );
 }
 
 const Section = styled.section`
-  padding: 5rem 0;
+  padding: 1.5rem 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;

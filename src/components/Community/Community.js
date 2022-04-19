@@ -6,7 +6,7 @@ import Article from './Article/Article';
 
 const Community = () => {
     return (
-        <div>
+        <div className='container'>
             <Routes>
                 <Route path='/' element={<Home></Home>} />
                 <Route path='/blog/:id' element={<Article></Article>} />

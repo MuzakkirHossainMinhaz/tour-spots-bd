@@ -77,10 +77,14 @@ footer {
 .footer__description {
     margin-bottom: 1rem;
 }
+.footer__data ul{
+    padding: 0;
+}
 .footer__social {
     color: rgb(118, 18, 212);
     font-size: 1.25rem;
     margin-right: var(--mb-1-25);
+    text-decoration: none;
 }
 .footer__subtitle {
     color: blueviolet;
@@ -91,6 +95,7 @@ footer {
 }
 .footer__link {
     color: var(--text-color);
+    text-decoration: none;
 }
 .footer__link:hover {
     color: var(--title-color);

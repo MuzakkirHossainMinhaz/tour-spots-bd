@@ -5,7 +5,7 @@ import Place from './Place/Place';
 
 const Places = () => {
     return (
-        <div>
+        <div className='container my-5'>
             <Routes>
                 <Route path='/' element={<Home></Home>} />
                 <Route path='/place/:id' element={<Place></Place>} />

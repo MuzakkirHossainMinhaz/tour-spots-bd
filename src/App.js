@@ -8,6 +8,9 @@ import Home from './components/Home/Home';
 import Places from './components/Places/Places';
 import Community from './components/Community/Community';
 import About from './components/About/About';
+import Login from './components/Login/Login'
+import Logout from './components/Logout/Logout'
+import Features from './components/Features';
 
 export default function App() {
   useEffect(() => {
@@ -42,6 +45,10 @@ export default function App() {
         <Route path='/places/*' element={<Places></Places>}></Route>
         <Route path='/community/*' element={<Community></Community>}></Route>
         <Route path='/about' element={<About></About>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/logout' element={<Logout></Logout>}></Route>
+        <Route path='/features' element={<Features></Features>}></Route>
+        <Route path='/register' element={<Logout></Logout>}></Route>
       </Routes>
     </div>
   );

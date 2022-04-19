@@ -1,3 +1,3 @@
 # TourSpotsBD
 
-[Live Site](https://tour-spots-bd.netlify.app/).
+[Live Site](https://tour-spots-bd.web.app).

@@ -11,7 +11,7 @@ const SearchBar = ({ formSubmit, value, handleSearchKey, clearSearch }) => (
                 onChange={handleSearchKey}
             />
             {value && <span onClick={clearSearch}>X</span>}
-            <button>Search</button>
+            <button className='px-4'>Search</button>
         </form>
     </div>
 );

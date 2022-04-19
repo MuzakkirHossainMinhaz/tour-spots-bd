@@ -3,19 +3,19 @@ import styled from "styled-components";
 import homeImage from "../assets/hero.png";
 export default function Hero() {
     return (
-        <Section id="hero">
+        <Section id="hero" className="container">
             <div className="background">
                 <img src={homeImage} alt="" />
             </div>
             <div className="content">
                 <div className="title">
-                    <h1>TRAVEL TO EXPLORE</h1>
+                    <h1 className="fw-bold">TRAVEL TO EXPLORE</h1>
                     <p>
                         Explore Your Favorite Places in Bangladesh.
                     </p>
                 </div>
                 <div className="search">
-                    <div className="container">
+                    <div className="container1">
                         <label htmlFor="">Where you want to go</label>
                         <input type="text" placeholder="Search Your location" />
                     </div>
@@ -36,7 +36,7 @@ export default function Hero() {
 
 const Section = styled.section`
   position: relative;
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 100%;
   height: 100%;
 
@@ -78,7 +78,7 @@ const Section = styled.section`
       padding: 0.5rem;
       border-radius: 0.5rem;
       margin-top: 2.5rem;
-      .container {
+      .container1 {
         display: flex;
         align-items: center;
         justify-content: center;

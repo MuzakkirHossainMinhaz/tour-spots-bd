@@ -19,7 +19,7 @@ export default function Article() {
         });
     }, []);
     return (
-        <>
+        <div className="mt-5">
             <Link className='blog-goBack' to='/community'>
                 <span> &#8592;</span> <span>Go Back</span>
             </Link>
@@ -50,6 +50,6 @@ export default function Article() {
                     </div>
                 </div>
             )}
-        </>
+        </div>
     );
 }

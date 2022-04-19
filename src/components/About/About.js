@@ -4,9 +4,9 @@ import './About.css'
 
 const About = () => {
     return (
-        <div>
+        <div className='container'>
             <div className="about-us">
-                <h1>About Us</h1>
+                <h1 className='fw-bold text-info'>About Us</h1>
                 <div className="person">
                     <img src="https://i.ibb.co/PQQshp4/pic-1.png" alt="" />
                     <h3>Muzakkir Hossain Minhaz</h3>

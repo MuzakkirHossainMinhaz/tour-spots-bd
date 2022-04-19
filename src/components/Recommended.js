@@ -60,24 +60,10 @@ export default function Recommend() {
 
   // const [active, setActive] = useState(1);
   return (
-    <Section id="recommend">
+    <Section id="recommend" className="container">
       <div className="title">
-        <h1>RECOMMENDED SPOTS</h1>
+        <h2 className="fw-bold">RECOMMENDED SPOTS</h2>
       </div>
-      {/* <div className="packages">
-                <ul>
-                    {packages.map((pkg, index) => {
-                        return (
-                            <li
-                                className={active === index + 1 ? "active" : ""}
-                                onClick={() => setActive(index + 1)}
-                            >
-                                {pkg}
-                            </li>
-                        );
-                    })}
-                </ul>
-            </div> */}
       <div className="destinations">
         {data.map((destination) => {
           return (
@@ -85,18 +71,6 @@ export default function Recommend() {
               <img src={destination.image} alt="" />
               <h3>{destination.title}</h3>
               <p>{destination.subTitle}</p>
-              {/* <div className="info">
-                                <div className="services">
-                                    <img src={info1} alt="" />
-                                    <img src={info2} alt="" />
-                                    <img src={info3} alt="" />
-                                </div>
-                                <h4>{destination.cost}</h4>
-                            </div>
-                            <div className="distance">
-                                <span>1000 Kms</span>
-                                <span>{destination.duration}</span>
-                            </div> */}
             </div>
           );
         })}
@@ -106,7 +80,7 @@ export default function Recommend() {
 }
 
 const Section = styled.section`
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   .title {
     text-align: center;
     font-size: 25px;
@@ -131,9 +105,9 @@ const Section = styled.section`
   .destinations {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    margin-top: 3rem;
-    padding: 0 3rem;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    padding: 0 1.5rem;
     .destination {
       text-align: center;
       padding: 1rem;

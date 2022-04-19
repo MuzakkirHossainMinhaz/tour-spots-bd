@@ -22,6 +22,7 @@ export default function Articles() {
             console.log(articles);
         });
     }, []);
+
     return (
         <div>
             {articles.length === 0 ? (
@@ -39,19 +40,19 @@ export default function Articles() {
                         likes,
                         comments,
                     }) => (
-                        <div className="articles" key={id}>
+                        <div className="articles border border-2 border-primary" key={id}>
                             <div className="row-1">
                                 <div>
                                     <Link to={`/community/blog/${id}`}>
                                         <img
-                                            className="img"
+                                            className="img w-100"
                                             src={imageUrl}
                                             alt="titleImage"
                                             style={{ height: 160, width: 160 }}
                                         />
                                     </Link>
                                 </div>
-                                <div className="text">
+                                <div className="text ms-3">
                                     <div className="row-2">
                                         <div>
                                             {createdBy && (
@@ -66,9 +67,9 @@ export default function Articles() {
                                     </div>
                                     <h2>{title}</h2>
                                     <small>{createdAt.toDate().toDateString()}</small>
-                                    <h5>{description}</h5>
+                                    <h6>{description}</h6>
 
-                                    <div className="d-flex flex-row-reverse likes">
+                                    <div className="d-flex flex-row-reverse">
                                         {user && <LikeArticle id={id} likes={likes} />}
                                         <div className="pe-2">
                                             <p>{likes?.length} likes</p>

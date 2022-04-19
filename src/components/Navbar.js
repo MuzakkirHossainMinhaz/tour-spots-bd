@@ -3,44 +3,30 @@ import styled from "styled-components";
 import logo from "../assets/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
-import app from '../firebase.init'
+import { auth } from '../firebase.init'
+import { useAuthState } from "react-firebase-hooks/auth";
+import { signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
-const auth = getAuth(app);
 
 export default function Navbar() {
   const [navbarState, setNavbarState] = useState(false);
+  const navigate = useNavigate();
+  const [user] = useAuthState(auth);
 
-  const provider = new GoogleAuthProvider();
-  const [user, setUser] = useState({});
-
-  const handleGoogleSignIn = () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        const user = result.user;
-        setUser(user);
-        console.log(user);
-      })
-      .catch((error) => {
-        console.error('error', error);
-      });
+  const handleSignOut = () => {
+    signOut(auth);
   }
 
-  const handleGoogleSignOut = () => {
-    signOut(auth)
-      .then(() => {
-        setUser({});
-      })
-      .catch((error) => {
-        alert("Error Found..!");
-      })
+  const handleSignIn = () => {
+    navigate('/login')
   }
 
   return (
     <>
-      <Nav>
+      <Nav className="container mt-3">
         <div className="brand">
-          <div className="container">
+          <div className="container1">
             <img src={logo} alt="" />
             TourSpotsBD
           </div>
@@ -69,17 +55,17 @@ export default function Navbar() {
         </ul>
 
         {
-          !user.uid ?
-            <button onClick={handleGoogleSignIn}>Sign in</button> :
-
-            <div className="profile">
-              <img src={user.photoURL} alt="" />
-              <p>{user.displayName}</p>
-
-              <button onClick={handleGoogleSignOut}>Sign out</button>
+          user ?
+            <div className="d-flex align-items-center">
+              <p className="mb-0">Signed in as <span className="text-success font-monospace me-3">{user.email}</span></p>
+              <button className="border-0 text-white" onClick={handleSignOut}>SignOut</button>
             </div>
+            :
+            <button onClick={handleSignIn}>Signin</button>
         }
+
       </Nav>
+
       <ResponsiveNav state={navbarState}>
         <ul>
           <li>
@@ -113,7 +99,7 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   .brand {
-    .container {
+    .container1 {
       margin-left: 3px;
       color: brown;
       cursor: pointer;
@@ -132,6 +118,8 @@ const Nav = styled.nav`
   ul {
     display: flex;
     gap: 1rem;
+    margin-bottom: 0;
+    align-items: center;
     list-style-type: none;
     li {
       a {

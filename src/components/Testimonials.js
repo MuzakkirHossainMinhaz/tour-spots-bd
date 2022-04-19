@@ -3,48 +3,40 @@ import styled from "styled-components";
 import avatarImage1 from "../assets/avatarImage1.png";
 import avatarImage3 from "../assets/avatarImage3.png";
 import avatarImage2 from "../assets/avatarImage2.png";
+
 export default function Testimonials() {
     return (
-        <Section id="testimonials">
+        <Section id="testimonials" className="container d-block mx-auto">
             <div className="title">
-                <h2>Happy Visitors</h2>
+                <h2 className="fw-bold">Happy Visitors</h2>
             </div>
             <div className="testimonials">
                 <div className="testimonial">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-                        asperiores eaque.
-                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate asperiores eaque.</p>
                     <div className="info">
                         <img src={avatarImage1} alt="" />
                         <div className="details">
-                            <h4>Muzakkir Hossain Minhaz</h4>
+                            <h5>Muzakkir Hossain Minhaz</h5>
                             <span>DEPT. - CSE; Batch - 8th</span>
                         </div>
                     </div>
                 </div>
                 <div className="testimonial">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-                        asperiores eaque.
-                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate asperiores eaque.</p>
                     <div className="info">
                         <img src={avatarImage2} alt="" />
                         <div className="details">
-                            <h4>Md. Shohan Khan</h4>
+                            <h5>Md. Shohan Khan</h5>
                             <span>DEPT. - CSE; Batch - 8th</span>
                         </div>
                     </div>
                 </div>
                 <div className="testimonial">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-                        asperiores eaque.
-                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate asperiores eaque.</p>
                     <div className="info">
                         <img src={avatarImage3} alt="" />
                         <div className="details">
-                            <h4>Yasir Arafat Prince</h4>
+                            <h5>Yasir Arafat Prince</h5>
                             <span>DEPT. - CSE; Batch - 8th</span>
                         </div>
                     </div>
@@ -55,7 +47,7 @@ export default function Testimonials() {
 }
 
 const Section = styled.section`
-  margin: 5rem 0;
+  margin: 3rem 0;
   .title {
     text-align: center;
     margin-bottom: 2rem;
@@ -63,8 +55,7 @@ const Section = styled.section`
   .testimonials {
     display: flex;
     justify-content: center;
-    margin: 0 2rem;
-    gap: 2rem;
+    gap: 1.5rem;
     .testimonial {
       background-color: aliceblue;
       padding: 2rem;
@@ -83,12 +74,12 @@ const Section = styled.section`
         margin-top: 1rem;
         img {
           border-radius: 3rem;
-          height: 3rem;
+          height: 2.5rem;
         }
         .details {
           margin-top: 0;
-          h4{
-            margin-top: 0;
+          h5{
+            margin: 0 auto;
           }
           span {
             font-size: 0.9rem;
